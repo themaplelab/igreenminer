@@ -1,0 +1,94 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test -workspace /Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/CartrackTechChallenge.xcworkspace -scheme CartrackTechChallenge -destination "platform=iOS,name=Green’s iPhone" -only-testing CartrackTechChallengeTests/AccountServiceTests/ -allowProvisioningUpdates
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+    IDETestRunOnlyIdentifiers = (
+    "CartrackTechChallengeTests/AccountServiceTests/"
+)
+
+2022-06-30 12:59:16.310 xcodebuild[19405:29525190] CFURLRequestSetHTTPCookieStorageAcceptPolicy_block_invoke: no longer implemented and should not be called
+2022-06-30 12:59:20.239 xcodebuild[19405:29525004] [MT] DVTAssertions: Warning in /Library/Caches/com.apple.xbs/Sources/IDEFrameworks/IDEFrameworks-18212/IDEFoundation/Testing/IDETestRunSpecificationBuilder.m:678
+Details:  Failed to compute path to baseline file during test run spec construction: <XCTHTestRunSpecification: 0x7fcb6f671280>
+Object:   <IDETestRunSpecificationBuilder>
+Method:   +testRunSpecificationsForTestingSpecifiers:scheme:buildables:withBuildParameters:additionalEnvironmentVariables:additionalCommandLineArguments:testRerunPolicy:includeClangProfileParameters:shouldDebugAppExtensions:error:
+Thread:   <NSThread: 0x7fcb6be08fb0>{number = 1, name = main}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+note: Using new build system
+note: Building targets in parallel
+note: Planning build
+note: Analyzing workspace
+note: Constructing build description
+note: Build preparation complete
+warning: Multiple targets match implicit dependency for linker flags '-framework Alamofire'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallenge' from project 'CartrackTechChallenge')
+    note: Target 'Alamofire-iOS12.0' (in project 'Pods')
+    note: Target 'Alamofire-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework Alamofire'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+    note: Target 'Alamofire-iOS12.0' (in project 'Pods')
+    note: Target 'Alamofire-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework RxCocoa'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallenge' from project 'CartrackTechChallenge')
+    note: Target 'RxCocoa-iOS12.0' (in project 'Pods')
+    note: Target 'RxCocoa-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework RxCocoa'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+    note: Target 'RxCocoa-iOS12.0' (in project 'Pods')
+    note: Target 'RxCocoa-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework RxRelay'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+    note: Target 'RxRelay-iOS12.0' (in project 'Pods')
+    note: Target 'RxRelay-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework RxRelay'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallenge' from project 'CartrackTechChallenge')
+    note: Target 'RxRelay-iOS12.0' (in project 'Pods')
+    note: Target 'RxRelay-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework RxSwift'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallenge' from project 'CartrackTechChallenge')
+    note: Target 'RxSwift-iOS12.0' (in project 'Pods')
+    note: Target 'RxSwift-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework RxSwift'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+    note: Target 'RxSwift-iOS12.0' (in project 'Pods')
+    note: Target 'RxSwift-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework SwiftyJSON'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallenge' from project 'CartrackTechChallenge')
+    note: Target 'SwiftyJSON-iOS12.0' (in project 'Pods')
+    note: Target 'SwiftyJSON-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework SwiftyJSON'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+    note: Target 'SwiftyJSON-iOS12.0' (in project 'Pods')
+    note: Target 'SwiftyJSON-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework Swinject'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+    note: Target 'Swinject-iOS12.0' (in project 'Pods')
+    note: Target 'Swinject-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework Swinject'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallenge' from project 'CartrackTechChallenge')
+    note: Target 'Swinject-iOS12.0' (in project 'Pods')
+    note: Target 'Swinject-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework SwinjectStoryboard'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallenge' from project 'CartrackTechChallenge')
+    note: Target 'SwinjectStoryboard-iOS12.0' (in project 'Pods')
+    note: Target 'SwinjectStoryboard-iOS13.1' (in project 'Pods')
+warning: Multiple targets match implicit dependency for linker flags '-framework SwinjectStoryboard'. Consider adding an explicit dependency on the intended target to resolve this ambiguity. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+    note: Target 'SwinjectStoryboard-iOS12.0' (in project 'Pods')
+    note: Target 'SwinjectStoryboard-iOS13.1' (in project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'RxSwift-iOS12.0' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'SwinjectStoryboard-iOS13.1' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'Mockingjay' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'RxRelay-iOS12.0' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'Alamofire-iOS12.0' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'SwiftyJSON-iOS13.1' from project 'Pods')
+error: No account for team "9EG8P6NRX2". Add a new account in the Accounts preference pane or verify that your accounts have valid credentials. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+error: No signing certificate "iOS Development" found: No "iOS Development" signing certificate matching team ID "9EG8P6NRX2" with a private key was found. (in target 'CartrackTechChallengeTests' from project 'CartrackTechChallenge')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'RxCocoa-iOS12.0' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'RxSwift-iOS13.1' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'Swinject-iOS12.0' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'Swinject-iOS13.1' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'Alamofire-iOS13.1' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'RxCocoa-iOS13.1' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'SwinjectStoryboard-iOS12.0' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'RxRelay-iOS13.1' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'URITemplate' from project 'Pods')
+/Users/greenali/Desktop/loopEnergy/RealAppsEval/CartrackTech/CartrackTechChallenge/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.5.99. (in target 'SwiftyJSON-iOS12.0' from project 'Pods')
+
+
+Test session results, code coverage, and logs:
+	/Users/greenali/Library/Developer/Xcode/DerivedData/CartrackTechChallenge-fjldtfaaxdhacaeyonfoywusvqci/Logs/Test/Test-CartrackTechChallenge-2022.06.30_12-59-20--0600.xcresult
+
+Testing failed:
+	No account for team "9EG8P6NRX2". Add a new account in the Accounts preference pane or verify that your accounts have valid credentials.
+	No signing certificate "iOS Development" found: No "iOS Development" signing certificate matching team ID "9EG8P6NRX2" with a private key was found.
+	Testing cancelled because the build failed.
+
+** TEST FAILED **
+
