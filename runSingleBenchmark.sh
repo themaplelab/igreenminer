@@ -74,15 +74,24 @@ echo "Sampling start time:  $(date '+%T')" 2>&1 | tee $csvPath+"sampleStartTime.
 ### ### ### ### ### ###
 ### CONDITION NO 2 ###
 ### ### ### ### ### ###
-### Keep these lines uncommented for a test case of an xcodeproject execution ###
-xcodebuild test -workspace $xcodeWsPath -scheme $scheme -destination "platform=iOS,name=Green’s iPhone" -only-testing $test_location -allowProvisioningUpdates 2>&1 | tee $csvPath+"xcode.txt"
+### Keep these lines uncommented for a test case of an CartrackTechChallenge xcodeproject execution ###
+### echo xcodebuild test -workspace $xPath -scheme CartrackTechChallenge -destination "platform=iOS,name=Green’s iPhone" -only-testing CartrackTechChallengeTests -allowProvisioningUpdates
+### xcodebuild test -workspace $xPath -scheme CartrackTechChallenge -destination "platform=iOS,name=Green’s iPhone" -only-testing CartrackTechChallengeTests -allowProvisioningUpdates 2>&1 | tee $csvPath+"xcode.txt"
 #### CONDITION ENDS ####
 
 ### ### ### ### ### ###
-### CONDITION NO 3 ###
+### CONDITION NO 2 ###
+### ### ### ### ### ###
+### Keep these lines uncommented for a test case of an InventarioSeguro xcodeproject execution ###
+echo xcodebuild test -workspace $xPath -scheme InventarioSeguro -destination "platform=iOS,name=Green’s iPhone" -only-testing InventarioSeguroUITests -allowProvisioningUpdates
+xcodebuild test -workspace $xPath -scheme InventarioSeguro -destination "platform=iOS,name=Green’s iPhone" -only-testing InventarioSeguroUITests -allowProvisioningUpdates 2>&1 | tee $csvPath+"xcode.txt"
+#### CONDITION ENDS ####
+
+### ### ### ### ### ###
+### CONDITION NO 4 ###
 ### ### ### ### ### ###
 ### Keep these lines uncommented for a test case of an xcode workspace execution ###
-xcodebuild test -project $xPath -scheme $scheme -destination "platform=iOS,name=Green’s iPhone" -only-testing $test_location -allowProvisioningUpdates 2>&1 | tee $csvPath+"xcode.txt"
+#xcodebuild test -project $xPath -scheme $scheme -destination "platform=iOS,name=Green’s iPhone" -only-testing $test_location -allowProvisioningUpdates 2>&1 | tee $csvPath+"xcode.txt"
 #### CONDITION ENDS ####
 
 

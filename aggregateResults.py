@@ -64,6 +64,11 @@ def getStartTCTime(xCodeBuildPath):
     substring_teardown = "Tear Down"
     error_string = "Unable to launch"
     success_string = "** TEST SUCCEEDED **"
+    multiple_tests_string = "Test Suite 'All tests' passed"
+    multiple_test_start_string = "'All tests' started at "
+    multiple_tests_teardown_string = "'All tests' passed at "
+    multiple_tests = False
+
     with open(xCodeBuildPath) as f:
         lines = f.readlines()
 
@@ -73,11 +78,29 @@ def getStartTCTime(xCodeBuildPath):
             test_passed = True
             break
 
+    for x in reversed(lines):
+        if multiple_tests_string in x:
+            multiple_tests = True
+            break
+
     if test_passed is False:
         return "Build Failure by Xcode"
 
     count = 0
     end_exist = False
+
+    # Please note that overhead gets compromised in multiple tests, also the teardown is unknown, so the times are pretty inaccurate
+    if multiple_tests is True:
+        for line in lines:
+            count = count + 1
+            if multiple_test_start_string in line:
+                start = line.split(multiple_test_start_string)[1].split(" ")[1].strip()
+            if multiple_tests_teardown_string in line:
+                end = lines[count].split(" in ")[1].split(" (")[0]
+                end_exist = True
+                break
+        return start + "#" + end + "#" + str(0)
+
     for line in lines:
         if error_string in line:
             count = 0
@@ -141,7 +164,7 @@ def main(argv):
         with open(energyCsv, 'x') as f:
             f.write("file,benchmark,testrun,energy,totaltime,current,voltage,teststarttime,testendtime")
     except FileExistsError:
-        print("Output file rightfully exists!")
+        print("Output file already exists.")
 
     startMonsoonTime = getStartTime(startTimePath).split(":")
     startMonsoonTime = int(startMonsoonTime[0])*3600 + int(startMonsoonTime[1])*60 + int(startMonsoonTime[2])
