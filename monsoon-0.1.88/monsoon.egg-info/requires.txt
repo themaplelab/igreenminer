@@ -1,0 +1,4 @@
+numpy
+pyusb
+libusb1
+scipy
